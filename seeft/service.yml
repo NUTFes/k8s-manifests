@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: seeft-mobile
+  namespace: seeft
+spec:
+  type: ClusterIP
+  selector:
+    app: seeft-mobile
+  ports:
+    - name: http
+      port: 80
+      targetPort: 45029
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seeft-admin
+  namespace: seeft
+spec:
+  type: ClusterIP
+  selector:
+    app: seeft-admin
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seeft-api
+  namespace: seeft
+spec:
+  type: ClusterIP
+  selector:
+    app: seeft-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: 1234
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seeft-postgres
+  namespace: seeft
+spec:
+  type: ClusterIP
+  selector:
+    app: seeft-postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432

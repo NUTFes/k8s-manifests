@@ -1,0 +1,10 @@
+.env
+*.env
+cert.pem
+*.key
+*.pem
+*tunnel*.json
+cloudflared/*.json
+secrets/
+.secret/
+env/
