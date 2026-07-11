@@ -45,7 +45,7 @@ spec:
       - name: harbor-creds
       containers:
       - name: seeft-mobile-container
-        image: reg.nutmeg.cloud/seeft/mobile:de4f24b
+        image: reg.nutmeg.cloud/seeft/mobile:728061b
         command: ["python3", "./python/server.py"]
         ports:
           - containerPort: 45029
@@ -72,7 +72,7 @@ spec:
       - name: harbor-creds
       containers:
       - name: seeft-admin-container
-        image: reg.nutmeg.cloud/seeft/admin:de4f24b
+        image: reg.nutmeg.cloud/seeft/admin:728061b
         command: ["sh", "-c", "npm install && npm run dev"]
         ports:
           - containerPort: 3000
@@ -99,7 +99,7 @@ spec:
       - name: harbor-creds
       containers:
       - name: seeft-api-container
-        image: reg.nutmeg.cloud/seeft/api:de4f24b
+        image: reg.nutmeg.cloud/seeft/api:728061b
         command: ["go", "run", "main.go"]
         ports:
           - containerPort: 1234
